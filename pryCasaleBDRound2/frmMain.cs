@@ -15,10 +15,11 @@ namespace pryCasaleBDRound2
     public partial class frmMain : Form
     {
         //DECLARANDO LAS VARIABLES Y OBJETOS GLOBALES DEL PRY
-        OleDbConnection conexionBase;
-        OleDbCommand queQuieroDeLaBase;
-        OleDbDataReader lectorDeConsultas;
-        string varRutaDeBaseDeDatos =
+        public OleDbConnection conexionBase;
+        public OleDbCommand queQuieroDeLaBase;
+        public OleDbDataReader lectorDeConsultas;
+
+        public string varRutaDeBaseDeDatos =
             "D:\\Escritorio\\pryCasaleBDRound2\\pryCasaleBDRound2\\DEPORTE.accdb";
 
         public frmMain()
@@ -55,6 +56,12 @@ namespace pryCasaleBDRound2
         {
             frmConsultaDeportista frmConsultaDeportista = new frmConsultaDeportista();
             frmConsultaDeportista.ShowDialog();
+        }
+
+        private void entrenadorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultaEntrenador frmConsultaEntrenador = new frmConsultaEntrenador();  
+            frmConsultaEntrenador.ShowDialog();
         }
     }
 }
